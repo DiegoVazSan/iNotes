@@ -13,6 +13,7 @@ class ViewModel: ObservableObject {
     @Published var note = ""
     @Published var date = Date()
     @Published var show = false
+    @Published var updateItem : Notes!
     
     //Core Data
     
@@ -38,6 +39,25 @@ class ViewModel: ObservableObject {
             try context.save()
         } catch let error as NSError {
             print("Did not delete note, \(error.localizedDescription)")
+        }
+    }
+    
+    func sendData(item: Notes){
+        updateItem = item
+        note = item.note ?? ""
+        date = item.date ?? Date()
+        show.toggle()
+    }
+    
+    func editData(context: NSManagedObjectContext){
+        updateItem.date = date
+        updateItem.note = note
+        do {
+            try context.save()
+            show.toggle()
+            print("Did Edit Successfully")
+        } catch let error as NSError{
+            print("Error trying to edit, \(error.localizedDescription)")
         }
     }
     

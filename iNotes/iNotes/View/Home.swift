@@ -25,7 +25,7 @@ struct Home: View {
                         Text(item.date ?? Date(), style: .date)
                     }.contextMenu {
                         Button {
-                            print("Edit")
+                            model.sendData(item: item)
                         } label: {
                             Text("Edit ✏️")
                         }
@@ -42,7 +42,8 @@ struct Home: View {
                 model.show.toggle()
             }, label: {
                 Text("🗒️")
-            })).sheet(isPresented: $model.show, content: {
+            }))
+            .sheet(isPresented: $model.show, content: {
                 AddView(model: model)
             })
         }
