@@ -10,6 +10,7 @@ import SwiftUI
 struct AddView: View {
     
     @ObservedObject var model: ViewModel
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack {
@@ -22,7 +23,7 @@ struct AddView: View {
             DatePicker("Select a Date", selection: $model.date)
             Spacer()
             Button {
-                 print("Save note")
+                model.saveData(context: context)
             } label: {
                 Text("+ Save")
                     .foregroundColor(.white)
