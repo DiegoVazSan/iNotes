@@ -14,6 +14,8 @@
 		DB8690512BB4E7CA00CD54A6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8690502BB4E7CA00CD54A6 /* Persistence.swift */; };
 		DB8690542BB4E7CA00CD54A6 /* iNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB8690522BB4E7CA00CD54A6 /* iNotes.xcdatamodeld */; };
 		DB86905D2BB4EA5E00CD54A6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86905C2BB4EA5E00CD54A6 /* ViewModel.swift */; };
+		DB86905F2BB4EC0100CD54A6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86905E2BB4EC0100CD54A6 /* Home.swift */; };
+		DB8690612BB4EC1C00CD54A6 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8690602BB4EC1C00CD54A6 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		DB8690502BB4E7CA00CD54A6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DB8690532BB4E7CA00CD54A6 /* iNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iNotes.xcdatamodel; sourceTree = "<group>"; };
 		DB86905C2BB4EA5E00CD54A6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DB86905E2BB4EC0100CD54A6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		DB8690602BB4EC1C00CD54A6 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 		DB86905B2BB4EA3000CD54A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB86905E2BB4EC0100CD54A6 /* Home.swift */,
+				DB8690602BB4EC1C00CD54A6 /* AddView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,10 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8690612BB4EC1C00CD54A6 /* AddView.swift in Sources */,
 				DB86905D2BB4EA5E00CD54A6 /* ViewModel.swift in Sources */,
 				DB8690512BB4E7CA00CD54A6 /* Persistence.swift in Sources */,
 				DB8690542BB4E7CA00CD54A6 /* iNotes.xcdatamodeld in Sources */,
 				DB86904A2BB4E7CA00CD54A6 /* ContentView.swift in Sources */,
+				DB86905F2BB4EC0100CD54A6 /* Home.swift in Sources */,
 				DB8690482BB4E7CA00CD54A6 /* iNotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
