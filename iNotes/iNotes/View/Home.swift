@@ -13,6 +13,23 @@ struct Home: View {
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Notes.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)], animation: .spring()) var results : FetchedResults<Notes>
     
+    //MARK: NS PREDICATES
+    /// It works to filter different types of matches inside CoreData
+    
+    /*@FetchRequest(entity: Notes.entity(), sortDescriptors: [],
+                  predicate: NSPredicate(format: "note == 'IMPORTANTE'"),
+                  animation: .spring()) var results : FetchedResults<Notes>*/
+    
+    /*@FetchRequest(entity: Notes.entity(), sortDescriptors: [],
+                  predicate: NSPredicate(format: "note BEGINSWITH 'IMPORTANTE'"),
+                  animation: .spring()) var results : FetchedResults<Notes>*/
+    
+    /*@FetchRequest(entity: Notes.entity(), sortDescriptors: [],
+                  predicate: NSPredicate(format: "note CONTAINS 'importante'"),
+                  animation: .spring()) var results : FetchedResults<Notes>*/
+    
+    
+    
     var body: some View {
         NavigationView {
             List {
